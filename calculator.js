@@ -1,7 +1,7 @@
 import readline from "readline-sync";
 
 //  welcome user
-console.log("Welcome to the basic calculator");
+console.log("Welcome to the simple calculator");
 
 // create a prompt helper function to console log questions
 const prompt = (message) => {
@@ -71,6 +71,14 @@ const calculator = () => {
     case "4":
       console.log(`${num1} / ${num2} = ${(num1 / num2).toFixed(2)}`);
       break;
+  }
+  // Ask user to keep using the calculator or to quit
+  prompt("Would you like to calculate another operation?\n Press Enter to continue or 'Q' to quit.")
+  let repeat = readline.question().toLowerCase();
+  if (repeat === 'q') {
+    prompt("Thank you for using simple calculator, see you later! ")
+  } else {
+    calculator()
   }
 };
 
