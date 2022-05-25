@@ -1,11 +1,22 @@
 {
-  "welcome": "Welcome to the simple calculator",
-  "getFirstNumber": "Enter a number you want to use in a math operation:",
-  "getSecondNumber": "Enter the other number:",
-  "errorNumber": "You entered an invalid value, enter a number...",
-  "getMathOperation": "Choose your math operation: 1)Add 2)Subtrct 3)Multiply 4)Divide",
-  "errorMathOperation": "Enter the number of your math operation, don't type anything else!",
-  "continueCalculator": "Would you like to calculate another operation?\n Press Enter to continue or 'Q' to quit.",
-  "bye": "Thank you for using simple calculator, see you later! "
-
+  "en": {
+    "welcome": "Welcome to the simple calculator",
+    "getFirstNumber": "Enter a number you want to use in a math operation:",
+    "getSecondNumber": "Enter the other number:",
+    "errorNumber": "You entered an invalid value, enter a number...",
+    "getMathOperation": "Choose your math operation: 1)Add 2)Subtrct 3)Multiply 4)Divide",
+    "errorMathOperation": "Enter the number of your math operation, don't type anything else!",
+    "continueCalculator": "Would you like to calculate another operation?\n Press Enter to continue or 'Q' to quit.",
+    "bye": "Thank you for using simple calculator, see you later! "
+  },
+  "ar":{
+    "welcome": "مرحباً بكم في الحاسبة البسيطة",
+    "getFirstNumber": " :أدخل رقماً تستخدمه في عملية حسابية",
+    "getSecondNumber": " :أدخل رقماً آخر",
+    "errorNumber": "القيمة المدخلة غير صالحة،أدخل رقماً صحيحاً...",
+    "getMathOperation": "اختر رقم العملية الحسابية: 1)جمع 2)طرح 3)ضرب 4)قسمة",
+    "errorMathOperation": "أدخل رقم العملية الحسابية وليس شيء آخر",
+    "continueCalculator": "للاستمرار باستخدام الحاسبة اضغط زر Enter أو اضغط على 'Q' للخروج",
+    "bye": "شكراً لاستخدامك الحاسبة البسيطة، نراك لاحقاً"
+  }
 }
