@@ -4,10 +4,15 @@ import { createRequire } from "module"; // Bring in the ability to create the 'r
 const require = createRequire(import.meta.url); // construct the require method
 const MESSAGES = require("./calculatorMessages.json");
 
-//  welcome user
-console.log(MESSAGES["welcome"]);
+// get messages in specified language
+const messages = (message, lang='en') => {
+  return MESSAGES[lang][message]
+}
 
-// create a prompt helper function to console log questions
+//  welcome user
+console.log(messages('welcome', 'ar'));
+
+// helper function to console log questions
 const prompt = (message) => {
   console.log(`=> ${message}`);
 };
@@ -19,10 +24,10 @@ const invalidNum = (num) => {
 
 // ask user to enter a number
 const getNum1 = () => {
-  prompt(MESSAGES["getFirstNumber"]);
+  prompt(messages('getFirstNumber', 'ar'));
   let num1 = Number(readline.question());
   while (invalidNum(num1)) {
-    prompt(MESSAGES["errorNumber"]);
+    prompt(messages("errorNumber", 'ar'));
     num1 = Number(readline.question());
   }
   return num1;
@@ -30,10 +35,10 @@ const getNum1 = () => {
 
 //  ask user to enter another number
 const getNum2 = () => {
-  prompt(MESSAGES["getSecondNumber"]);
+  prompt(messages("getSecondNumber", 'ar'));
   let num2 = Number(readline.question());
   while (invalidNum(num2)) {
-    prompt(MESSAGES["errorNumber"]);
+    prompt(messages("errorNumber", 'ar'));
     num2 = Number(readline.question());
   }
   return num2;
@@ -41,13 +46,13 @@ const getNum2 = () => {
 
 //  ask user to enter the operation
 const getMathOperation = () => {
-  prompt(MESSAGES["getMathOperation"]);
+  prompt(messages("getMathOperation", 'ar'));
   let mathOperation = readline.question();
   while (
     !mathOperation === "" ||
     !["1", "2", "3", "4"].includes(mathOperation)
   ) {
-    prompt(MESSAGES["errorMathOperation"]);
+    prompt(messages("errorMathOperation", 'ar'));
     prompt("1)Add 2)Subtrct 3)Multiply 4)Divide");
     mathOperation = readline.question();
   }
@@ -75,10 +80,10 @@ const calculator = () => {
       break;
   }
   // Ask user to keep using the calculator or to quit
-  prompt(MESSAGES["continueCalculator"]);
+  prompt(messages("continueCalculator", 'ar'));
   let repeat = readline.question().toLowerCase();
   if (repeat === "q") {
-    prompt(MESSAGES['bye']);
+    prompt(messages('bye', 'ar'));
   } else {
     calculator();
   }
