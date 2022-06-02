@@ -9,13 +9,13 @@ const prompt = (msg) => {
 };
 
 // welcome the player
-prompt("*** Welcome to rock paper scissors game ***")
+prompt("*** Welcome to rock paper scissors game ***");
 
 // define valid choices
 const VALID_CHOICES = ["rock", "paper", "scissors"];
 
-// Get the player's choice 
-const getPlayerChoice = () => {  
+// Get the player's choice
+const getPlayerChoice = () => {
   prompt(`Choose one: ${VALID_CHOICES.join(", ")}`);
   let playerChoice = readline.question();
   while (!VALID_CHOICES.includes(playerChoice)) {
@@ -26,7 +26,7 @@ const getPlayerChoice = () => {
     );
     playerChoice = readline.question();
   }
-  return playerChoice
+  return playerChoice;
 };
 
 // Get the computer's random choice and then dispplay the winner
@@ -54,18 +54,18 @@ const displayWinner = (playerChoice) => {
       `You chose: ${playerChoice}, computer chose: ${computerChoice} It's a draw!\n`
     );
   }
-}
+};
 
 const playGame = () => {
-  const playerChoice = getPlayerChoice()
-  displayWinner(playerChoice)
-  prompt("Would you like to play again? ")
+  const playerChoice = getPlayerChoice();
+  displayWinner(playerChoice);
+  prompt("Would you like to play again? ");
   let answer = readline.question();
   if (answer !== "yes".toLowerCase()) {
-    prompt("Bye Bye!")
+    prompt("Bye Bye!");
   } else {
-    playGame()
+    playGame();
   }
-}
- 
-setTimeout(playGame, 1000)
+};
+
+setTimeout(playGame, 1000);
